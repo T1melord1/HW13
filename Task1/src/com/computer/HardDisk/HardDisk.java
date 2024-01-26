@@ -1,14 +1,14 @@
-package com.computer;
+package com.computer.HardDisk;
 
 public class HardDisk {
     private int memoryCapacity;
     private double weight;
-    public enum Type {HDD,SSD}
     private Type type;
 
-    public HardDisk(int memoryCapacity, double weight) {
+    public HardDisk(int memoryCapacity, double weight, Type type) {
         this.memoryCapacity = memoryCapacity;
         this.weight = weight;
+        this.type = type;
     }
 
     public int getMemoryCapacity() {
@@ -40,6 +40,7 @@ public class HardDisk {
         return "HardDisk{" +
                 "memoryCapacity=" + memoryCapacity +
                 ", weight=" + weight +
+                ", type=" + type +
                 '}';
     }
 }

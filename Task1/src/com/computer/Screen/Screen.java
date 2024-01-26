@@ -1,14 +1,14 @@
-package com.computer;
+package com.computer.Screen;
 
 public class Screen {
     private double diagonal;
     private double weight;
-    public enum Type {IPS, TN, VA}
     private Type type;
 
-    public Screen(double diagonal, double weight) {
+    public Screen(double diagonal, double weight, Type type) {
         this.diagonal = diagonal;
         this.weight = weight;
+        this.type = type;
     }
 
     public double getDiagonal() {
@@ -40,6 +40,7 @@ public class Screen {
         return "Screen{" +
                 "diagonal=" + diagonal +
                 ", weight=" + weight +
+                ", type=" + type +
                 '}';
     }
 }

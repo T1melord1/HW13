@@ -1,14 +1,14 @@
-package com.computer;
+package com.computer.AccessMemory;
 
 public class AccessMemory {
     private double volume;
     private double weight;
-    public enum Type{DDR3, DDR4, DDR5}
-    private Type type;
+    private AccessMemoryType type;
 
-    public AccessMemory(double volume, double weight) {
+    public AccessMemory(double volume, double weight, AccessMemoryType type) {
         this.volume = volume;
         this.weight = weight;
+        this.type = type;
     }
 
     public double getVolume() {
@@ -27,11 +27,11 @@ public class AccessMemory {
         this.weight = weight;
     }
 
-    public Type getType() {
+    public AccessMemoryType getType() {
         return type;
     }
 
-    public void setType(Type type) {
+    public void setType(AccessMemoryType type) {
         this.type = type;
     }
 
@@ -40,6 +40,7 @@ public class AccessMemory {
         return "AccessMemory{" +
                 "volume=" + volume +
                 ", weight=" + weight +
+                ", type=" + type +
                 '}';
     }
 }

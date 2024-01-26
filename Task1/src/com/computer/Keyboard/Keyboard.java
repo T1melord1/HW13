@@ -1,14 +1,14 @@
-package com.computer;
+package com.computer.Keyboard;
 
 public class Keyboard {
     private double weight;
-    public enum Type{MEMBRANE, MECHANICAL}
-    public enum Backlight{YES, NO}
     private Type type;
     private Backlight backlight;
 
-    public Keyboard(double weight) {
+    public Keyboard(double weight, Type type, Backlight backlight) {
         this.weight = weight;
+        this.type = type;
+        this.backlight = backlight;
     }
 
     public double getWeight() {
@@ -39,6 +39,8 @@ public class Keyboard {
     public String toString() {
         return "Keyboard{" +
                 "weight=" + weight +
+                ", type=" + type +
+                ", backlight=" + backlight +
                 '}';
     }
 }

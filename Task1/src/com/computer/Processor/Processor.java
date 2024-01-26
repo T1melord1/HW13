@@ -1,19 +1,16 @@
-package com.computer;
+package com.computer.Processor;
 
 public class Processor {
     private double weight;
-    public enum Frequency{LOW, MEDIUM, HIGH}
-    public enum CoreCount{TWO, FOUR, EIGHT}
-    public enum Manufacturer{INTEL, AMD}
-
     private Frequency frequency;
     private CoreCount coreCount;
     private Manufacturer manufacturer;
 
-
-
-    public Processor(double weight) {
+    public Processor(double weight, Frequency frequency, CoreCount coreCount, Manufacturer manufacturer) {
         this.weight = weight;
+        this.frequency = frequency;
+        this.coreCount = coreCount;
+        this.manufacturer = manufacturer;
     }
 
     public double getWeight() {
@@ -52,7 +49,9 @@ public class Processor {
     public String toString() {
         return "Processor{" +
                 "weight=" + weight +
+                ", frequency=" + frequency +
+                ", coreCount=" + coreCount +
+                ", manufacturer=" + manufacturer +
                 '}';
     }
-
 }

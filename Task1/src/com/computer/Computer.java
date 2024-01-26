@@ -1,5 +1,11 @@
 package com.computer;
 
+import com.computer.AccessMemory.AccessMemory;
+import com.computer.HardDisk.HardDisk;
+import com.computer.Keyboard.Keyboard;
+import com.computer.Processor.Processor;
+import com.computer.Screen.Screen;
+
 public class Computer {
     private Processor processor;
     private AccessMemory accessMemory;
@@ -7,15 +13,17 @@ public class Computer {
     private Screen screen;
     private Keyboard keyboard;
 
-    private final String vendor = "Belarus";
-    private final String name = "Bizon";
+    private final String vendor;
+    private final String name;
 
-    public Computer(Processor processor, AccessMemory accessMemory, HardDisk hardDisk, Screen screen, Keyboard keyboard) {
+    public Computer(Processor processor, AccessMemory accessMemory, HardDisk hardDisk, Screen screen, Keyboard keyboard, String vendor, String name) {
         this.processor = processor;
         this.accessMemory = accessMemory;
         this.hardDisk = hardDisk;
         this.screen = screen;
         this.keyboard = keyboard;
+        this.vendor = vendor;
+        this.name = name;
     }
 
     public Processor getProcessor() {
@@ -57,11 +65,18 @@ public class Computer {
     public void setKeyboard(Keyboard keyboard) {
         this.keyboard = keyboard;
     }
-    public double allWeight(){
-    double weightOfAllComponents = getKeyboard().getWeight()+ getProcessor().getWeight()+ getScreen().getWeight()+
-            getHardDisk().getWeight()+ accessMemory.getWeight();
-        return weightOfAllComponents;
+
+    public String getVendor() {
+        return vendor;
     }
+
+    public String getName() {
+        return name;
+    }
+    public double allWeight(){
+        return processor.getWeight() + keyboard.getWeight() + screen.getWeight() + hardDisk.getWeight() + accessMemory.getWeight();
+    }
+
     @Override
     public String toString() {
         return "Computer{" +
@@ -70,7 +85,10 @@ public class Computer {
                 ", hardDisk=" + hardDisk +
                 ", screen=" + screen +
                 ", keyboard=" + keyboard +
+                ", vendor='" + vendor + '\'' +
+                ", name='" + name + '\'' +
                 '}';
     }
 }
+
 

@@ -3,6 +3,8 @@ package com.computer;
 public class AccessMemory {
     private double volume;
     private double weight;
+    public enum Type{DDR3, DDR4, DDR5}
+    private Type type;
 
     public AccessMemory(double volume, double weight) {
         this.volume = volume;
@@ -23,6 +25,14 @@ public class AccessMemory {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 
     @Override

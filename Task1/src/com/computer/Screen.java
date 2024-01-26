@@ -3,6 +3,8 @@ package com.computer;
 public class Screen {
     private double diagonal;
     private double weight;
+    public enum Type {IPS, TN, VA}
+    private Type type;
 
     public Screen(double diagonal, double weight) {
         this.diagonal = diagonal;
@@ -23,6 +25,14 @@ public class Screen {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 
     @Override

@@ -3,6 +3,8 @@ package com.computer;
 public class HardDisk {
     private int memoryCapacity;
     private double weight;
+    public enum Type {HDD,SSD}
+    private Type type;
 
     public HardDisk(int memoryCapacity, double weight) {
         this.memoryCapacity = memoryCapacity;
@@ -23,6 +25,14 @@ public class HardDisk {
 
     public void setWeight(double weight) {
         this.weight = weight;
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
     }
 
     @Override

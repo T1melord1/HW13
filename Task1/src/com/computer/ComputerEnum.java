@@ -1,0 +1,9 @@
+package com.computer;
+
+public enum ComputerEnum {
+    FREQUENCY,NUMBEROFCORES,MANUFACTURER,
+    TYPEOFRAM,
+    TYPEOFSSD,
+    TYPEOFSCREEN,
+    TYPEOFKEYBOARD, THEBACKLIGHT
+}

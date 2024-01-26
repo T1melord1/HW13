@@ -12,6 +12,7 @@ public class Main {
         Computer computer = new Computer(processor,accessMemory,hardDisk,screen,keyboard);
         System.out.println("Вес процессора: " + computer.getProcessor().getWeight());
         System.out.println(computer);
+        System.out.println(computer.allWeight());
     }
 
 }

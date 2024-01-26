@@ -7,6 +7,9 @@ public class Computer {
     private Screen screen;
     private Keyboard keyboard;
 
+    private final String vendor = "Belarus";
+    private final String name = "Bizon";
+
     public Computer(Processor processor, AccessMemory accessMemory, HardDisk hardDisk, Screen screen, Keyboard keyboard) {
         this.processor = processor;
         this.accessMemory = accessMemory;
@@ -54,7 +57,11 @@ public class Computer {
     public void setKeyboard(Keyboard keyboard) {
         this.keyboard = keyboard;
     }
-
+    public double allWeight(){
+    double weightOfAllComponents = getKeyboard().getWeight()+ getProcessor().getWeight()+ getProcessor().getWeight()+ getScreen().getWeight()+
+            getHardDisk().getWeight()+ accessMemory.getWeight();
+        return weightOfAllComponents;
+    }
     @Override
     public String toString() {
         return "Computer{" +

@@ -58,7 +58,7 @@ public class Computer {
         this.keyboard = keyboard;
     }
     public double allWeight(){
-    double weightOfAllComponents = getKeyboard().getWeight()+ getProcessor().getWeight()+ getProcessor().getWeight()+ getScreen().getWeight()+
+    double weightOfAllComponents = getKeyboard().getWeight()+ getProcessor().getWeight()+ getScreen().getWeight()+
             getHardDisk().getWeight()+ accessMemory.getWeight();
         return weightOfAllComponents;
     }
